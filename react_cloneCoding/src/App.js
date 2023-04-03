@@ -1,11 +1,7 @@
-import "./App.css";
+import "./index.scss";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header"></header>
-    </div>
-  );
+  return <div className="App">dd</div>;
 }
 
 export default App;
