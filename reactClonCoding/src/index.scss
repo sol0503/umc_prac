@@ -23,8 +23,19 @@
   justify-content: center;
 }
 .mainPage .mainHead .headCenter .searchBtn {
-  width: 360px;
+  width: 370px;
   height: 48px;
+  display: flex;
+  align-items: center;
+  background-color: white;
+  border: 1px solid lightgray;
+  border-radius: 30px;
+}
+.mainPage .mainHead .headCenter .searchBtn .btn {
+  margin-left: 10px;
+  margin-right: 10px;
+  background-color: white;
+  border: none;
 }
 .mainPage .mainHead .headCenter .headRight {
   display: flex;
