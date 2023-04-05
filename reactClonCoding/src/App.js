@@ -1,4 +1,3 @@
-import "./App.css";
 import "./index.scss";
 import MainPage from "./page/MainPage";
 
