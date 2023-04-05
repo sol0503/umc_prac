@@ -1,21 +1,67 @@
-.MainPage .MainHead {
+.mainPage .mainHead {
   display: flex;
   height: 80px;
   width: 100%;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid #dddddd;
   justify-content: center;
 }
-.MainPage .MainHead .HeadCenter {
+.mainPage .mainHead .headCenter {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-between;
+  align-items: center;
   width: 90%;
 }
-.MainPage .MainHead .HeadCenter .name {
+.mainPage .mainHead .headCenter .headLeft {
   display: flex;
   align-items: center;
+  width: 100%;
 }
-
-.MainPage .MainHead .HeadCenter .btn {
-  width: 500px;
+.mainPage .mainHead .headCenter .search {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.mainPage .mainHead .headCenter .searchBtn {
+  width: 360px;
+  height: 48px;
+}
+.mainPage .mainHead .headCenter .headRight {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: flex-end;
+}
+.mainPage .mainHead .headCenter .headRight .yours {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  font-weight: bold;
+  border-radius: 22px;
+  cursor: pointer;
+  transition: color 250ms ease;
+  background-color: white;
+  height: 42px;
+  border: none;
+}
+.mainPage .mainHead .headCenter .headRight .lang {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  background-color: white;
+  cursor: pointer;
+}
+.mainPage .mainHead .headCenter .headRight .userBtn {
+  width: 77px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  padding: 5px 5px 5px 12px;
+  border-radius: 21px;
+  border: 1px solid #dddddd;
+  background-color: white;
+  cursor: pointer;
+  transition: box-shadow 0.2s ease;
 }
