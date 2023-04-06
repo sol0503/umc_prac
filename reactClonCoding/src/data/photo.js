@@ -120,3 +120,6 @@ const photo = [
     name: "Ruprechtov, 체코",
   },
 ];
+// module.exports = photo;
+
+export default photo;

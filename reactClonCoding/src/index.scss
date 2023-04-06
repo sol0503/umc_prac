@@ -7,6 +7,11 @@
   border-bottom: 1px solid #dddddd;
   justify-content: center;
 }
+.mainPage .mainHead .line {
+  height: 1px;
+  width: 100%;
+  background-color: #dddddd;
+}
 .mainPage .mainHead .headCenter1 {
   display: flex;
   flex-direction: row;
@@ -85,9 +90,80 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  height: 78px;
   width: 90%;
+}
+.mainPage .mainHead .headCenter2 .menuBar {
+  display: flex;
+  width: 93%;
+  justify-content: space-between;
+  align-items: center;
 }
 .mainPage .mainHead .headCenter2 .menus {
   display: flex;
   flex-direction: row;
+  width: 100%;
+  justify-content: space-around;
+}
+
+.mainPage .mainHead .headCenter2 .menus .menuItem {
+  height: 55px;
+  quotes: 63px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.mainPage .mainHead .headCenter2 .menus .menuItem h6 {
+  width: 100%;
+  height: 18px;
+  padding-top: 10px;
+  margin: 0;
+}
+.mainPage .mainHead .headCenter2 .menus img {
+  height: 24px;
+  width: 24px;
+}
+.mainPage .mainHead .headCenter2 .arrowBtn {
+  background-color: white;
+  border: 1px solid rgb(221, 221, 221);
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+}
+.mainPage .mainHead .headCenter2 .filterBtn {
+  width: 80px;
+  height: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12px;
+  background-color: white;
+  border: 1px solid rgb(221, 221, 221);
+}
+.mainPage .main {
+  display: flex;
+  justify-content: center;
+}
+
+.main .content {
+  width: 90%;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.main .content .photoItem {
+  flex-basis: calc(50% / 6);
+  box-sizing: border-box;
+  padding: 10px;
+}
+.main .content .photoItem .placeBtn {
+  padding: 0px;
+  background-color: white;
+  border: none;
+}
+.main .content .photoItem img {
+  width: 270px;
+  height: 256px;
 }

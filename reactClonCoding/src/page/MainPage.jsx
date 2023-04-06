@@ -1,13 +1,39 @@
 import "../index.scss";
+import React from "react";
 import { ReactComponent as Logo } from "../svg/logo.svg";
 import { ReactComponent as Lan } from "../svg/lan.svg";
 import { ReactComponent as User } from "../svg/user.svg";
 import { ReactComponent as Person } from "../svg/person.svg";
 import { ReactComponent as Search } from "../svg/search.svg";
+import { ReactComponent as LeftArrow } from "../svg/leftArrow.svg";
+import { ReactComponent as RightArrow } from "../svg/rightArrow.svg";
+import { ReactComponent as Filter } from "../svg/filter.svg";
 import menu from "../data/menu";
+import photo from "../data/photo";
+import { useState } from "react";
 // const menu = require("../data/menu");
 //import 와 export비교해보기
+
 const MainPage = () => {
+  const [count, setCount] = useState(0);
+  const itemsPage = 15;
+  const ClickNext = () => {
+    setCount(count + itemsPage);
+  };
+  const ClickPrev = () => {
+    setCount(count - itemsPage);
+  };
+
+  // function printPhotosInGroupsOfSix() {
+  //   for (let i = 0; i < photo.length; i += 6) {
+  //     const group = photo.slice(i, i + 6); // 6개씩 그룹으로 자름
+  //     const line = group.join("\t"); // 탭으로 구분된 문자열 생성
+  //     console.log(line); // 한 줄에 6개씩 출력
+  //   }
+  // }
+
+  // printPhotosInGroupsOfSix(); // 6개씩 한 줄로 출력
+
   return (
     <div className="mainPage">
       <div className="mainHead">
@@ -50,15 +76,60 @@ const MainPage = () => {
             </button>
           </div>
         </div>
+        <div className="line"></div>
         <div className="headCenter2">
-          <div className="menus">
-            {menu.map((item) => (
-              <div key={item.name}>
-                <img src={item.image} alt={item.name} />
-                <h2>{item.name}</h2>
-              </div>
-            ))}
+          <div className="menuBar">
+            {count != 0 ? (
+              <button onClick={ClickPrev} className="arrowBtn">
+                <LeftArrow />
+              </button>
+            ) : (
+              <div style={{ width: "28px", height: "28px" }}></div>
+            )}
+            <div className="menus">
+              {menu.slice(count, count + itemsPage).map((item) => (
+                <div key={item.name} className="menuItem">
+                  <img src={item.image} alt={item.name} />
+                  <h6>{item.name}</h6>
+                </div>
+              ))}
+            </div>
+            {count != 45 ? (
+              <button onClick={ClickNext} className="arrowBtn">
+                <RightArrow />
+              </button>
+            ) : (
+              <div
+                style={{
+                  width: "28px",
+                  height: "28px",
+                }}
+              ></div>
+            )}
           </div>
+          <button className="filterBtn">
+            <Filter />
+            필터
+          </button>
+        </div>
+      </div>
+      <div className="main">
+        <div className="content">
+          {photo.map((item, index) => {
+            if (index % 6 === 0) {
+              const group = photo.slice(index, index + 6);
+              const line = group.map((groupItem) => (
+                <div key={groupItem.id} className="photoItem">
+                  <button className="placeBtn">
+                    <img src={groupItem.image} alt={groupItem.name} />
+                    <p>{groupItem.name}</p>
+                  </button>
+                </div>
+              ));
+              return line;
+            }
+            return null;
+          })}
         </div>
       </div>
     </div>
