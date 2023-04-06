@@ -1,11 +1,10 @@
 .mainPage .mainHead {
   display: flex;
   flex-direction: column;
-
   width: 100%;
   align-items: center;
-  border-bottom: 1px solid #dddddd;
   justify-content: center;
+  margin-bottom: 10px;
 }
 .mainPage .mainHead .line {
   height: 1px;
