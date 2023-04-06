@@ -24,16 +24,6 @@ const MainPage = () => {
     setCount(count - itemsPage);
   };
 
-  // function printPhotosInGroupsOfSix() {
-  //   for (let i = 0; i < photo.length; i += 6) {
-  //     const group = photo.slice(i, i + 6); // 6개씩 그룹으로 자름
-  //     const line = group.join("\t"); // 탭으로 구분된 문자열 생성
-  //     console.log(line); // 한 줄에 6개씩 출력
-  //   }
-  // }
-
-  // printPhotosInGroupsOfSix(); // 6개씩 한 줄로 출력
-
   return (
     <div className="mainPage">
       <div className="mainHead">
