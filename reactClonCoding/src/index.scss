@@ -156,7 +156,7 @@
 .main .content .photoItem {
   flex-basis: calc(50% / 6);
   box-sizing: border-box;
-  padding: 10px;
+  padding: 5px;
 }
 .main .content .photoItem .placeBtn {
   padding: 0px;
@@ -166,4 +166,5 @@
 .main .content .photoItem img {
   width: 270px;
   height: 256px;
+  border-radius: 10px;
 }
