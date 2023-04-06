@@ -4,11 +4,14 @@ import { ReactComponent as Lan } from "../svg/lan.svg";
 import { ReactComponent as User } from "../svg/user.svg";
 import { ReactComponent as Person } from "../svg/person.svg";
 import { ReactComponent as Search } from "../svg/search.svg";
+import menu from "../data/menu";
+// const menu = require("../data/menu");
+//import 와 export비교해보기
 const MainPage = () => {
   return (
     <div className="mainPage">
       <div className="mainHead">
-        <div className="headCenter">
+        <div className="headCenter1">
           <div className="headLeft">
             <Logo />
           </div>
@@ -45,6 +48,16 @@ const MainPage = () => {
               <User />
               <Person />
             </button>
+          </div>
+        </div>
+        <div className="headCenter2">
+          <div className="menus">
+            {menu.map((item) => (
+              <div key={item.name}>
+                <img src={item.image} alt={item.name} />
+                <h2>{item.name}</h2>
+              </div>
+            ))}
           </div>
         </div>
       </div>

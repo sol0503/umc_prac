@@ -1,28 +1,32 @@
 .mainPage .mainHead {
   display: flex;
-  height: 80px;
+  flex-direction: column;
+
   width: 100%;
+  align-items: center;
   border-bottom: 1px solid #dddddd;
   justify-content: center;
 }
-.mainPage .mainHead .headCenter {
+.mainPage .mainHead .headCenter1 {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  height: 80px;
+
   width: 90%;
 }
-.mainPage .mainHead .headCenter .headLeft {
+.mainPage .mainHead .headCenter1 .headLeft {
   display: flex;
   align-items: center;
   width: 100%;
 }
-.mainPage .mainHead .headCenter .search {
+.mainPage .mainHead .headCenter1 .search {
   width: 100%;
   display: flex;
   justify-content: center;
 }
-.mainPage .mainHead .headCenter .searchBtn {
+.mainPage .mainHead .headCenter1 .searchBtn {
   width: 370px;
   height: 48px;
   display: flex;
@@ -31,19 +35,19 @@
   border: 1px solid lightgray;
   border-radius: 30px;
 }
-.mainPage .mainHead .headCenter .searchBtn .btn {
+.mainPage .mainHead .headCenter1 .searchBtn .btn {
   margin-left: 10px;
   margin-right: 10px;
   background-color: white;
   border: none;
 }
-.mainPage .mainHead .headCenter .headRight {
+.mainPage .mainHead .headCenter1 .headRight {
   display: flex;
   align-items: center;
   width: 100%;
   justify-content: flex-end;
 }
-.mainPage .mainHead .headCenter .headRight .yours {
+.mainPage .mainHead .headCenter1 .headRight .yours {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -56,7 +60,7 @@
   height: 42px;
   border: none;
 }
-.mainPage .mainHead .headCenter .headRight .lang {
+.mainPage .mainHead .headCenter1 .headRight .lang {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -64,7 +68,7 @@
   background-color: white;
   cursor: pointer;
 }
-.mainPage .mainHead .headCenter .headRight .userBtn {
+.mainPage .mainHead .headCenter1 .headRight .userBtn {
   width: 77px;
   height: 42px;
   display: flex;
@@ -75,4 +79,15 @@
   background-color: white;
   cursor: pointer;
   transition: box-shadow 0.2s ease;
+}
+.mainPage .mainHead .headCenter2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+}
+.mainPage .mainHead .headCenter2 .menus {
+  display: flex;
+  flex-direction: row;
 }
