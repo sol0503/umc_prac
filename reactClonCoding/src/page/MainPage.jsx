@@ -11,12 +11,17 @@ import { ReactComponent as Filter } from "../svg/filter.svg";
 import menu from "../data/menu";
 import photo from "../data/photo";
 import { useState } from "react";
+import { useLocation, useNavigate } from "react-router-dom";
 // const menu = require("../data/menu");
 //import 와 export비교해보기
 
 const MainPage = () => {
   const [count, setCount] = useState(0);
   const itemsPage = 15;
+
+  const navigate = useNavigate();
+  const location = useLocation();
+
   const ClickNext = () => {
     setCount(count + itemsPage);
   };
@@ -110,7 +115,17 @@ const MainPage = () => {
               const group = photo.slice(index, index + 6);
               const line = group.map((groupItem) => (
                 <div key={groupItem.id} className="photoItem">
-                  <button className="placeBtn">
+                  <button
+                    onClick={() =>
+                      navigate("/detailPage", {
+                        state: {
+                          image: groupItem.image,
+                          content: groupItem.name,
+                        },
+                      })
+                    }
+                    className="placeBtn"
+                  >
                     <img src={groupItem.image} alt={groupItem.name} />
                     <p>{groupItem.name}</p>
                   </button>
